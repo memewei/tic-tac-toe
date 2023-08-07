@@ -1,0 +1,96 @@
+@font-face {
+    font-family: serif-regular;
+    src: url(assets/PTSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: serif-bold;
+    src: url(assets/PTSerif-Bold.ttf);
+}
+
+:root{
+    --primary-color: rgb(81, 17, 67);
+    --secondary-color: rgb(193, 185, 217);
+    --accent-color: rgb(230, 230, 250);
+    --dark-font-color: rgb(81, 17, 67);
+    --light-font-color: #f5f5fa;
+    --player-one: rgb(153, 191, 154);
+    --player-two: rgb(49, 77, 50);
+    --bold-font: serif-bold;
+    --normal-font: serif-regular;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--secondary-color);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 20px;
+}
+
+.title{
+    font-family: var(--bold-font);
+    color: var(--light-font-color);
+    font-size: 3rem;
+}
+
+.player-name{
+    color: var(--light-font-color);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#game-board{
+    height: 600px;
+    width: 600px;
+    background-color: var(--accent-color);
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    border: 2px solid var(--primary-color);
+}
+
+.marker-box{
+    border: 1px solid var(--primary-color);
+    color: var(--dark-font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.x{
+    background-color: var(--player-one);
+}
+
+.o{
+    background-color: var(--player-two);
+}
+
+.x::after{
+    content:'\e9b8';
+    color: var(--light-font-color);
+}
+
+.o::after{
+    content: '\e859';
+    color: var(--light-font-color);
+}
+
+.x::after, .o::after{
+    font-family: unicons-line;
+    font-size: 8rem;
+}

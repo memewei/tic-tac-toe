@@ -44,6 +44,10 @@ header{
 
 .player-name{
     color: var(--light-font-color);
+    font-family: var(--bold-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main{
@@ -93,4 +97,16 @@ main{
 .x::after, .o::after{
     font-family: unicons-line;
     font-size: 8rem;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--primary-color);
+    color: var(--light-font-color);
+    font-size: 18px;
+    height: 50px;
+    
 }

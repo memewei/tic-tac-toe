@@ -10,13 +10,18 @@
     <body>
         <header>
             <div class="title">Amethyne Tic-Tac-Toe</div>
-            <div class="player-name">Player 1</div>
+            <div class="player-name">Player 1<p>'s turn!</p></div>
         </header>
         <main>
             <div class="container" id="game-board"></div>
+            <div class="winner-subtext"></div>
         </main>
         <footer>
-            <div class="subtext"></div>
+            <div>Copyright © 
+                <script>document.write(new Date().getFullYear())</script>
+                memewei
+                <i class="uil uil-github"></i>
+            </div>
         </footer>
         <script src="script.js"></script>
     </body>

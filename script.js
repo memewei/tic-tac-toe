@@ -48,7 +48,7 @@ const gamePlay = (() =>{
     let winnerDeclared = false;
     let remainingSpots = 9;
     
-    let subtext = document.querySelector('.subtext');
+    let subtext = document.querySelector('.winner-subtext');
     let playerName = document.querySelector('.player-name');
 
     const winningConditions = [
@@ -73,7 +73,7 @@ const gamePlay = (() =>{
     }
 
     function alertNextPlayer(){
-        this.activePlayer === player1 ? playerName.textContent = "Player 2" : playerName.textContent = "Player 1";
+        this.activePlayer === player1 ? playerName.textContent = "Player 2's turn!" : playerName.textContent = "Player 1's turn!";
         console.log('nextPlayer() function ran')
         console.log('active player: ' + activePlayer.name);
     }
